@@ -138,5 +138,8 @@ namespace TechJobsConsole
 
             return rowValues.ToArray();
         }
+        //public static FindByValue
+        //exclude repeat listings; write in a loop to ensure new code is counted; use collection methods, use FindByColumnAndValue as an example
+
     }
 }

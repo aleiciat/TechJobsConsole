@@ -57,6 +57,7 @@ namespace TechJobsConsole
                     // What is their search term?
                     Console.WriteLine("\nSearch term: ");
                     string searchTerm = Console.ReadLine();
+                    //call FindByValue on this line
 
                     List<Dictionary<string, string>> searchResults;
 
@@ -119,6 +120,17 @@ namespace TechJobsConsole
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
             Console.WriteLine("PrintJobs is not implemented yet");
+            //create nested loop for List of jobs, each job is a Dictionary
+            
+          /*  for (int i = 0; i < .Length; i++) 
+            {
+                for (int j = 0; j < .Length; i++) 
+                {
+
+                }
+            }  */
+            
+
         }
     }
 }
