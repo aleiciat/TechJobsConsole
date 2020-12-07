@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -138,10 +139,29 @@ namespace TechJobsConsole
 
             return rowValues.ToArray();
         }
-        /* public static List<Dictionary<string, string>> FindByValue(string value)
+        public static List<Dictionary<string, string>> FindByValue(string value)
          {
               LoadData();
               List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
-         } */
+
+                foreach (Dictionary<string, string> columnSearch in AllJobs)
+                {
+                    string findValue = columnSearch[value];
+
+                if (findValue.Contains(value))
+                    {
+                        jobs.Add(columnSearch);
+                    foreach (string jobColumns in columnSearch.Keys)
+                    {
+                        jobs.Add(columnSearch);
+                        break;
+                    }
+
+                }
+                //Dictionary<string, string> ridDuplicates = (Dictionary<string, string>)jobs.Distinct();
+    }
+                
+                return jobs;
+        }
     }
 }
