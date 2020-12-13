@@ -122,10 +122,10 @@ namespace TechJobsConsole
         {
             foreach (Dictionary<string, string> job in someJobs)
             {
-                string jobInfo = "Start of job info. \n";
+                string jobInfo = "Job listing: \n";
                 foreach(string columnOfJobs in job.Keys)
                 {
-                    jobInfo += columnOfJobs + ":" + job[columnOfJobs] + "\n";
+                    jobInfo += columnOfJobs + ": " + job[columnOfJobs] + "\n";
                 }
                 Console.WriteLine(jobInfo + "\n");
             }

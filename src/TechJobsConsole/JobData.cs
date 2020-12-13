@@ -146,22 +146,20 @@ namespace TechJobsConsole
 
                 foreach (Dictionary<string, string> columnSearch in AllJobs)
                 {
-                            foreach (string key in columnSearch.Keys)
-                            {
-                                string aValue = columnSearch[key];
-                                aValue = aValue.ToLower();
-                                value = value.ToLower();
-                                    if (aValue.Contains(value))
+                
+                    foreach (string key in columnSearch.Keys)
+                    {
+                            string aValue = columnSearch[key];
+                            aValue = aValue.ToLower();
+                            value = value.ToLower();
+                                if (aValue.Contains(value))
                                     {
                                         jobs.Add(columnSearch);
                                     }
-                                //break;
-                            }
-
-                        //Dictionary<string, string> ridDuplicates = (Dictionary<string, string>)jobs.Distinct();
+                    }
                 }
-                
-                return jobs;
+                jobs = jobs.Distinct().ToList();
+               return jobs;
         }
     }
 }
